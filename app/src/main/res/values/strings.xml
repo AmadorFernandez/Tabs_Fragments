@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Tab_Fragments</string>
+
+    <string-array name="tabs">
+
+        <item>Pc</item>
+        <item>Ratones</item>
+        <item>Mas cosas</item>
+        <item>Y mas</item>
+        <item>Alaaaaaa</item>
+
+
+    </string-array>
+</resources>
