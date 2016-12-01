@@ -20,7 +20,6 @@ public class CustomFragment extends Fragment {
 
     public static CustomFragment newInstance(Bundle args) {
         CustomFragment frag = new CustomFragment();
-
         if (args != null)
             frag.setArguments(args);
         return frag;

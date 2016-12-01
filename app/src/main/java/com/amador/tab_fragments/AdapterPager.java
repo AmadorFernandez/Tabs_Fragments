@@ -1,6 +1,7 @@
 package com.amador.tab_fragments;
 
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
@@ -12,12 +13,14 @@ public class AdapterPager extends FragmentStatePagerAdapter {
 
 
     private int conTab;
+    private String[] titles;
 
 
-    public AdapterPager(FragmentManager fm, int conTab){
+    public AdapterPager(FragmentManager fm, int conTab, String[] titles){
 
         super(fm);
         this.conTab = conTab;
+        this.titles = titles;
     }
 
     @Override
@@ -40,11 +43,11 @@ public class AdapterPager extends FragmentStatePagerAdapter {
                 bundle.putString(CustomFragment.KEY_REG_TEXT,"Tab 3");
                 customFragment = CustomFragment.newInstance(bundle);
                 break;
-            case 4:
+            case 3:
                 bundle.putString(CustomFragment.KEY_REG_TEXT,"Tab 4");
                 customFragment = CustomFragment.newInstance(bundle);
                 break;
-            case 5:
+            case 4:
                 bundle.putString(CustomFragment.KEY_REG_TEXT,"Tab 5");
                 customFragment = CustomFragment.newInstance(bundle);
                 break;
@@ -61,7 +64,7 @@ public class AdapterPager extends FragmentStatePagerAdapter {
 
     @Override
     public CharSequence getPageTitle(int position) {
-        return super.getPageTitle(position);
+        return this.titles[position];
     }
 
 
